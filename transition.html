@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 400px;
+            height: 100px;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container:hover .box{
+            transform: translateX(300px);
+        }
+
+        .card {
+            width: 90px;
+            height: 90px;
+            border-radius: 1rem;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+            z-index: 1;
+        }
+
+        .box {
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            position: absolute;
+            margin: 0 5px;
+            transition: transform 2s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card point-a">
+            Punto A
+        </div>
+        <div class="box">
+
+        </div>
+        <div class="card point-b">
+            Punto B
+        </div>
+    </div>
+</body>
+</html>
