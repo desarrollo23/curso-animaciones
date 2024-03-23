@@ -5,37 +5,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #40E0D0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            margin: 30px 10px;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            justify-content: center;
+        }
+
+        .container .card a{
+            text-decoration: none;
+        }
+
+        .card {
+            color: white;
+            width: 150px;
+            height: 150px;
+            background-color: #DE3163;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+            
+        }
+        
+        .card a {
+            color: white;
+        }
+
+        .card:hover {
+            cursor: pointer;
+        }
+
+        .translate:hover {
+            transform: translate(10px, 10px);
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        .scale:hover {
+            transform: scale(1.2);
+        }
+
+        .skew:hover {
+            transform: skew(20deg);
+        }
+
+        .style {
+            perspective: 100px;
+            position: relative;
+        }
+
+        .item {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+        }
+
+        .style:hover .item {
+            background-color: papayawhip;
+            border: 1px solid hotpink;
+            opacity: 0.5;
+            transform-style: preserve-3d;
+            transform: rotateX(30deg);
+        }
+
+        .origin { 
+            transform-origin: right top;
+        }
+
+        .origin:hover {
+            transform: rotate(40deg);
+        }
+
+
+
+    </style>
 </head>
 <body>
-    <h2>Hola, bienvenido a las animaciones</h2>
+    <div class="header">
+        <h2>Hola, bienvenido a las animaciones</h2>
+    </div>
+    
 
     <div class="container">
-        <ul>
-            <li>
-                <a href="translate.html">Translate</a>
-            </li>
-            <li>
-                <a href="rotate.html">Rotate</a>
-            </li>
-            <li>
-                <a href="scale.html">Scale</a>
-            </li>
-            <li>
-                <a href="skew.html">Skew</a>
-            </li>
-            <li>
-                <a href="style.html">Transform Style</a>
-            </li>
-            <li>
-                <a href="origin.html">Transform Origin</a>
-            </li>
-            <li>
-                <a href="backface-visibility.html">Back face visibility</a>
-            </li>
-            <li>
-                <a href="parallax.html">Parallax</a>
-            </li>
-        </ul>
+        <div class="card translate">
+            <span>Translate</span>
+        </div>
+        <div class="card rotate">
+            <span>Rotate</span>
+        </div>
+        <div class="card scale">
+            <span>Scale</span>
+        </div>
+        <div class="card skew">
+            <span>Skew</span>
+        </div>
+        <div class="card style">
+            <div class="item"></div>
+            <span>Transform Style</span>
+        </div>
+        <div class="card origin">
+            <span>Transform Origin</span>
+        </div>
+        <div class="card">
+            <a href="backface-visibility.html" target="_blank">Back face visibility</a>
+        </div>
+        <div class="card">
+            <a href="parallax.html" target="_blank">Parallax</a>
+        </div>
+        <div class="card transition">
+            <a href="transition.html" target="_blank">Transition</a>
+        </div>
+        <div class="card">
+            <a href="transition-timing.html" target="_blank">Transition Timing</a>
+        </div>
     </div>
 </body>
 </html>
